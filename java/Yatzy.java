@@ -8,12 +8,11 @@ public class Yatzy {
     
     public Yatzy(int d1, int d2, int d3, int d4, int d5)
     {
-        dice = new Integer[5];
-        dice[0] = d1;
-        dice[1] = d2;
-        dice[2] = d3;
-        dice[3] = d4;
-        dice[4] = d5;
+    	Integer[] movement = new Integer[]{d1,d2,d3,d4,d5};
+        dice = new Integer[DICE_NUMBER];
+        for(int i=0;i<movement.length;i++){
+        	dice[i] = movement[i];
+        }
     }
 
 	public int getChance(int d1, int d2, int d3, int d4, int d5) {
