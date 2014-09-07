@@ -93,11 +93,7 @@ public class Yatzy {
 
     public int sixes()
     {
-        int sum = 0;
-        for (int at = 0; at < dice.length; at++) 
-            if (dice[at] == 6)
-                sum = sum + 6;
-        return sum;
+    	return sumMatchingValues(dice, 6);
     }
 
     public static int score_pair(int d1, int d2, int d3, int d4, int d5)
