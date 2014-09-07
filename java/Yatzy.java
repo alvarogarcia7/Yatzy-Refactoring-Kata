@@ -53,13 +53,13 @@ public class Yatzy {
     }
 
 	private static int addTwos(Integer[] integers) {
-		return addAnyValue(integers);
+		return addAnyValue(integers, 2);
 	}
 
-	private static int addAnyValue(Integer[] integers) {
+	private static int addAnyValue(Integer[] integers, int value) {
 		int s = 0;
 		for (int i=0; i < 5; i++){
-			if (integers[i] == 2) s += 2;
+			if (integers[i] == value) s += value;
 		}
         return s;
 	}
