@@ -27,16 +27,16 @@ public class Yatzy {
 
     public static int yatzy(int... dice)
     {
-        int[] counts = new int[6];
-        for (int die : dice)
-            counts[die-1]++;
+        int[] counts = getCounts(dice);
         for (int i = 0; i != 6; i++)
             if (counts[i] == 5)
                 return 50;
         return 0;
     }
 
-    public static int ones(int d1, int d2, int d3, int d4, int d5) {
+
+
+	public static int ones(int d1, int d2, int d3, int d4, int d5) {
     	 return sumMatchingValues(new Integer[]{d1, d2, d3, d4, d5}, 1);
     }
 
@@ -96,15 +96,18 @@ public class Yatzy {
         else
             return 0;
     }
+    
+    private static int[] getCounts(int[] dice) {
+    	int[] counts = new int[6];
+    	for(int i =0; i< DICE_NUMBER; i++){
+    		counts[dice[i]-1]++;
+    	}
+		return counts;
+	}
 
 	private static int[] getCounts(int d1, int d2, int d3, int d4, int d5) {
-		int[] counts = new int[6];
-        counts[d1-1]++;
-        counts[d2-1]++;
-        counts[d3-1]++;
-        counts[d4-1]++;
-        counts[d5-1]++;
-		return counts;
+		return getCounts(new int[]{d1,d2,d3,d4,d5});
+		
 	}
 
     public static int four_of_a_kind(int _1, int _2, int d3, int d4, int d5)
