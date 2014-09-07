@@ -1,6 +1,6 @@
 public class Yatzy {
 	
-	protected int[] dice;
+	private int[] dice;
     public Yatzy() {
 		// TODO Auto-generated constructor stub
 	}
