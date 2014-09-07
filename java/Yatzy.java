@@ -129,12 +129,9 @@ public class Yatzy {
     public int smallStraight(int d1, int d2, int d3, int d4, int d5)
     {
         int[] tallies = getCounts(d1, d2, d3, d4, d5);
-        if (tallies[0] == 1 &&
-            tallies[1] == 1 &&
-            tallies[2] == 1 &&
-            tallies[3] == 1 &&
-            tallies[4] == 1)
-            return 15;
+        if(hasInRange(1,0,4, tallies)){
+        	return 15;
+        }
         return 0;
     }
 
