@@ -141,16 +141,22 @@ public class Yatzy {
     public int largeStraight(int d1, int d2, int d3, int d4, int d5)
     {
         int[] tallies = getCounts(d1, d2, d3, d4, d5);
-        if (tallies[1] == 1 &&
-            tallies[2] == 1 &&
-            tallies[3] == 1 &&
-            tallies[4] == 1
-            && tallies[5] == 1)
-            return 20;
+        if(hasInRange(1,1,5, tallies)){
+        	return 20;
+        }
         return 0;
     }
 
-    public int fullHouse(int d1, int d2, int d3, int d4, int d5)
+    private boolean hasInRange(int needle, int start, int end, int[] haystack) {
+    	for(int i = start; i<=end; i++){
+    		if(haystack[i]!=needle){
+    			return false;
+    		}
+    	}
+    	return true;
+    }
+
+	public int fullHouse(int d1, int d2, int d3, int d4, int d5)
     {
         int[] tallies = getCounts(d1, d2, d3, d4, d5);
         boolean _2 = false;
