@@ -62,12 +62,8 @@ public class Yatzy {
 	}
 
     public static int threes(int d1, int d2, int d3, int d4, int d5) {
-        return addThrees(new Integer[]{d1, d2, d3, d4, d5});
+        return sumMatchingValues(new Integer[]{d1, d2, d3, d4, d5}, 3);
     }
-
-	private static int addThrees(Integer[] integers) {
-		return sumMatchingValues(integers, 3);
-	}
 
 	public int fours()
     {
