@@ -40,7 +40,7 @@ public class Yatzy {
     }
 
     private int ones() {
-    	return sumMatchingValues(dice, 1);
+    	return sumMatchingValues(1);
 	}
 
 	public static int twos(int d1, int d2, int d3, int d4, int d5) {
@@ -48,13 +48,13 @@ public class Yatzy {
     }
 
 	private int twos() {
-		return sumMatchingValues(dice, 2);
+		return sumMatchingValues(2);
 	}
 
-	private int sumMatchingValues(Integer[] integers, int value) {
+	private int sumMatchingValues(int value) {
 		int s = 0;
 		for (int i=0; i < DICE_NUMBER; i++){
-			if (integers[i] == value) s += value;
+			if (dice[i] == value) s += value;
 		}
         return s;
 	}
@@ -64,22 +64,22 @@ public class Yatzy {
     }
 
 	private int threes() {
-		return sumMatchingValues(dice, 3);
+		return sumMatchingValues(3);
 	}
 
 	public int fours()
     {
-		return sumMatchingValues(dice, 4);
+		return sumMatchingValues(4);
     }
 
 	public int fives()
     {
-		return sumMatchingValues(dice, 5);
+		return sumMatchingValues(5);
     }
 
     public int sixes()
     {
-    	return sumMatchingValues(dice, 6);
+    	return sumMatchingValues(6);
     }
 
     public static int score_pair(int d1, int d2, int d3, int d4, int d5)
