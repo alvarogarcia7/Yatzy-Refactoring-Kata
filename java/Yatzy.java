@@ -75,17 +75,18 @@ public class Yatzy {
 
 	public int fours()
     {
-        int sum;    
-        sum = 0;
-        for (int at = 0; at != 5; at++) {
-            if (dice[at] == 4) {
-                sum += 4;
-            }
-        }
-        return sum;
+		return sumMatchingValues(dice, 4);
     }
 
-    public int fives()
+    private int sumMatchingValues(int[] dice, int value) {
+    	Integer[] diceAsInteger = new Integer[dice.length];
+    	for(int i=0; i<dice.length;i++){
+    		diceAsInteger[i] = dice[i]; 
+    	}
+    	return sumMatchingValues(diceAsInteger, value);
+	}
+
+	public int fives()
     {
         int s = 0;
         int i;
