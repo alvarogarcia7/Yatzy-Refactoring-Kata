@@ -129,8 +129,7 @@ public class Yatzy {
 
     public int smallStraight(int d1, int d2, int d3, int d4, int d5)
     {
-        int[] tallies;
-        tallies = getCounts(d1, d2, d3, d4, d5);
+        int[] tallies = getCounts(d1, d2, d3, d4, d5);
         if (tallies[0] == 1 &&
             tallies[1] == 1 &&
             tallies[2] == 1 &&
@@ -142,8 +141,7 @@ public class Yatzy {
 
     public int largeStraight(int d1, int d2, int d3, int d4, int d5)
     {
-        int[] tallies;
-        tallies = getCounts(d1, d2, d3, d4, d5);
+        int[] tallies = getCounts(d1, d2, d3, d4, d5);
         if (tallies[1] == 1 &&
             tallies[2] == 1 &&
             tallies[3] == 1 &&
@@ -155,7 +153,7 @@ public class Yatzy {
 
     public int fullHouse(int d1, int d2, int d3, int d4, int d5)
     {
-        int[] tallies;
+        int[] tallies = getCounts(d1, d2, d3, d4, d5);
         boolean _2 = false;
         int i;
         int _2_at = 0;
@@ -164,8 +162,6 @@ public class Yatzy {
 
 
 
-
-        tallies = getCounts(d1, d2, d3, d4, d5);
 
         for (i = 0; i != 6; i += 1)
             if (tallies[i] == 2) {
