@@ -81,12 +81,7 @@ public class Yatzy {
 
     public static int score_pair(int d1, int d2, int d3, int d4, int d5)
     {
-        int[] counts = new int[6];
-        counts[d1-1]++;
-        counts[d2-1]++;
-        counts[d3-1]++;
-        counts[d4-1]++;
-        counts[d5-1]++;
+        int[] counts = getCounts(d1, d2, d3, d4, d5);
         int at;
         for (at = 0; at != 6; at++)
             if (counts[6-at-1] >= 2)
@@ -96,12 +91,7 @@ public class Yatzy {
 
     public static int two_pair(int d1, int d2, int d3, int d4, int d5)
     {
-        int[] counts = new int[6];
-        counts[d1-1]++;
-        counts[d2-1]++;
-        counts[d3-1]++;
-        counts[d4-1]++;
-        counts[d5-1]++;
+        int[] counts = getCounts(d1, d2, d3, d4, d5);
         int n = 0;
         int score = 0;
         for (int i = 0; i < 6; i += 1)
@@ -114,6 +104,16 @@ public class Yatzy {
         else
             return 0;
     }
+
+	private static int[] getCounts(int d1, int d2, int d3, int d4, int d5) {
+		int[] counts = new int[6];
+        counts[d1-1]++;
+        counts[d2-1]++;
+        counts[d3-1]++;
+        counts[d4-1]++;
+        counts[d5-1]++;
+		return counts;
+	}
 
     public static int four_of_a_kind(int _1, int _2, int d3, int d4, int d5)
     {
