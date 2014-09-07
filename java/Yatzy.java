@@ -61,14 +61,6 @@ public class Yatzy {
 		return sumMatchingValues(dice, 4);
     }
 
-    private int sumMatchingValues(int[] dice, int value) {
-    	Integer[] diceAsInteger = new Integer[dice.length];
-    	for(int i=0; i<dice.length;i++){
-    		diceAsInteger[i] = dice[i]; 
-    	}
-    	return sumMatchingValues(diceAsInteger, value);
-	}
-
 	public int fives()
     {
 		return sumMatchingValues(dice, 5);
