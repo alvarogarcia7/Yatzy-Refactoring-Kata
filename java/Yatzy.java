@@ -36,10 +36,14 @@ public class Yatzy {
 
 
 	public static int ones(int d1, int d2, int d3, int d4, int d5) {
-    	 return sumMatchingValues(new Integer[]{d1, d2, d3, d4, d5}, 1);
+		return new Yatzy(d1, d2, d3, d4, d5).ones();
     }
 
-    public static int twos(int d1, int d2, int d3, int d4, int d5) {
+    private int ones() {
+    	return sumMatchingValues(dice, 1);
+	}
+
+	public static int twos(int d1, int d2, int d3, int d4, int d5) {
     	return new Yatzy(d1, d2, d3, d4, d5).twos();
     }
 
