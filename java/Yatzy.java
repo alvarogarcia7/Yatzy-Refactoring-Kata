@@ -73,8 +73,7 @@ public class Yatzy {
     public int score_pair(int d1, int d2, int d3, int d4, int d5)
     {
         int[] counts = getCounts(d1, d2, d3, d4, d5);
-        int at;
-        for (at = 0; at < 6; at++)
+        for (int at = 0; at < 6; at++)
             if (counts[6-at-1] >= 2)
                 return (6-at)*2;
         return 0;
@@ -155,7 +154,6 @@ public class Yatzy {
     {
         int[] tallies = getCounts(d1, d2, d3, d4, d5);
         boolean _2 = false;
-        int i;
         int _2_at = 0;
         boolean _3 = false;
         int _3_at = 0;
@@ -163,13 +161,13 @@ public class Yatzy {
 
 
 
-        for (i = 0; i < 6; i += 1)
+        for (int i = 0; i < 6; i += 1)
             if (tallies[i] == 2) {
                 _2 = true;
                 _2_at = i+1;
             }
 
-        for (i = 0; i < 6; i += 1)
+        for (int i = 0; i < 6; i += 1)
             if (tallies[i] == 3) {
                 _3 = true;
                 _3_at = i+1;
