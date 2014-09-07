@@ -1,5 +1,6 @@
 public class Yatzy {
 	
+	private static final int DICE_NUMBER = 5;
 	private int[] dice;
     public Yatzy() {
 		// TODO Auto-generated constructor stub
@@ -58,7 +59,7 @@ public class Yatzy {
 
 	private static int sumMatchingValues(Integer[] integers, int value) {
 		int s = 0;
-		for (int i=0; i < 5; i++){
+		for (int i=0; i < DICE_NUMBER; i++){
 			if (integers[i] == value) s += value;
 		}
         return s;
