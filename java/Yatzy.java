@@ -52,8 +52,12 @@ public class Yatzy {
 	}
 
     public static int threes(int d1, int d2, int d3, int d4, int d5) {
-        return sumMatchingValues(new Integer[]{d1, d2, d3, d4, d5}, 3);
+    	return new Yatzy(d1, d2, d3, d4, d5).threes();
     }
+
+	private int threes() {
+		return sumMatchingValues(dice, 3);
+	}
 
 	public int fours()
     {
