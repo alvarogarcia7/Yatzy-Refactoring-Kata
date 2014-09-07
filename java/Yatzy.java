@@ -1,14 +1,14 @@
 public class Yatzy {
 	
 	private static final int DICE_NUMBER = 5;
-	private int[] dice;
+	private Integer[] dice;
     public Yatzy() {
 		// TODO Auto-generated constructor stub
 	}
     
     public Yatzy(int d1, int d2, int d3, int d4, int d5)
     {
-        dice = new int[5];
+        dice = new Integer[5];
         dice[0] = d1;
         dice[1] = d2;
         dice[2] = d3;
