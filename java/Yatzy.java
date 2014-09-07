@@ -24,7 +24,7 @@ public class Yatzy {
 		return chance;
 	}
 
-    public static int yatzy(int... dice)
+    public int yatzy(int... dice)
     {
         int[] counts = getCounts(dice);
         for (int i = 0; i != 6; i++)
@@ -35,11 +35,11 @@ public class Yatzy {
 
 
 
-	public static int ones(int d1, int d2, int d3, int d4, int d5) {
+	public int ones(int d1, int d2, int d3, int d4, int d5) {
 		return new Yatzy(d1, d2, d3, d4, d5).sumMatchingValues(1);
     }
 
-    public static int twos(int d1, int d2, int d3, int d4, int d5) {
+    public int twos(int d1, int d2, int d3, int d4, int d5) {
     	return new Yatzy(d1, d2, d3, d4, d5).sumMatchingValues(2);
     }
 
@@ -51,7 +51,7 @@ public class Yatzy {
         return s;
 	}
 
-    public static int threes(int d1, int d2, int d3, int d4, int d5) {
+    public int threes(int d1, int d2, int d3, int d4, int d5) {
     	return new Yatzy(d1, d2, d3, d4, d5).sumMatchingValues(3);
     }
 
@@ -70,7 +70,7 @@ public class Yatzy {
     	return sumMatchingValues(6);
     }
 
-    public static int score_pair(int d1, int d2, int d3, int d4, int d5)
+    public int score_pair(int d1, int d2, int d3, int d4, int d5)
     {
         int[] counts = getCounts(d1, d2, d3, d4, d5);
         int at;
@@ -80,7 +80,7 @@ public class Yatzy {
         return 0;
     }
 
-    public static int two_pair(int d1, int d2, int d3, int d4, int d5)
+    public int two_pair(int d1, int d2, int d3, int d4, int d5)
     {
         int[] counts = getCounts(d1, d2, d3, d4, d5);
         int n = 0;
@@ -96,7 +96,7 @@ public class Yatzy {
             return 0;
     }
     
-    private static int[] getCounts(int[] dice) {
+    private int[] getCounts(int[] dice) {
     	int[] counts = new int[6];
     	for(int i =0; i< DICE_NUMBER; i++){
     		counts[dice[i]-1]++;
@@ -104,12 +104,12 @@ public class Yatzy {
 		return counts;
 	}
 
-	private static int[] getCounts(int d1, int d2, int d3, int d4, int d5) {
+	private int[] getCounts(int d1, int d2, int d3, int d4, int d5) {
 		return getCounts(new int[]{d1,d2,d3,d4,d5});
 		
 	}
 
-    public static int four_of_a_kind(int _1, int _2, int d3, int d4, int d5)
+    public int four_of_a_kind(int _1, int _2, int d3, int d4, int d5)
     {
         int[] tallies = getCounts(_1, _2, d3, d4, d5);
         for (int i = 0; i < 6; i++)
@@ -118,7 +118,7 @@ public class Yatzy {
         return 0;
     }
 
-    public static int three_of_a_kind(int d1, int d2, int d3, int d4, int d5)
+    public int three_of_a_kind(int d1, int d2, int d3, int d4, int d5)
     {
         int[] t = getCounts(d1, d2, d3, d4, d5);
         for (int i = 0; i < 6; i++)
@@ -127,7 +127,7 @@ public class Yatzy {
         return 0;
     }
 
-    public static int smallStraight(int d1, int d2, int d3, int d4, int d5)
+    public int smallStraight(int d1, int d2, int d3, int d4, int d5)
     {
         int[] tallies;
         tallies = getCounts(d1, d2, d3, d4, d5);
@@ -140,7 +140,7 @@ public class Yatzy {
         return 0;
     }
 
-    public static int largeStraight(int d1, int d2, int d3, int d4, int d5)
+    public int largeStraight(int d1, int d2, int d3, int d4, int d5)
     {
         int[] tallies;
         tallies = getCounts(d1, d2, d3, d4, d5);
@@ -153,7 +153,7 @@ public class Yatzy {
         return 0;
     }
 
-    public static int fullHouse(int d1, int d2, int d3, int d4, int d5)
+    public int fullHouse(int d1, int d2, int d3, int d4, int d5)
     {
         int[] tallies;
         boolean _2 = false;
