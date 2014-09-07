@@ -63,8 +63,7 @@ public class Yatzy {
     }
 
 	private static int addThrees(Integer[] integers) {
-		int s;    
-        s = 0;
+		int s = 0;
         if (integers[0] == 3) s += 3;
         if (integers[1] == 3) s += 3;
         if (integers[2] == 3) s += 3;
