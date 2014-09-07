@@ -53,10 +53,10 @@ public class Yatzy {
     }
 
 	private static int addTwos(Integer[] integers) {
-		return addAnyValue(integers, 2);
+		return sumMatchingValues(integers, 2);
 	}
 
-	private static int addAnyValue(Integer[] integers, int value) {
+	private static int sumMatchingValues(Integer[] integers, int value) {
 		int s = 0;
 		for (int i=0; i < 5; i++){
 			if (integers[i] == value) s += value;
@@ -69,7 +69,7 @@ public class Yatzy {
     }
 
 	private static int addThrees(Integer[] integers) {
-		return addAnyValue(integers, 3);
+		return sumMatchingValues(integers, 3);
 	}
 
 	public int fours()
