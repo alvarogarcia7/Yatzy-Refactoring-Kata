@@ -24,7 +24,7 @@ public class Yatzy {
 		return new Yatzy();
 	}
 
-	private static int getChance(int d1, int d2, int d3, int d4, int d5) {
+	public int getChance(int d1, int d2, int d3, int d4, int d5) {
 		int total = 0;
         total += d1;
         total += d2;
