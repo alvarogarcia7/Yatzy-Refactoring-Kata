@@ -27,7 +27,7 @@ public class Yatzy {
     public int yatzy(int... dice)
     {
         int[] counts = getCounts(dice);
-        for (int i = 0; i != 6; i++)
+        for (int i = 0; i < 6; i++)
             if (counts[i] == 5)
                 return 50;
         return 0;
@@ -74,7 +74,7 @@ public class Yatzy {
     {
         int[] counts = getCounts(d1, d2, d3, d4, d5);
         int at;
-        for (at = 0; at != 6; at++)
+        for (at = 0; at < 6; at++)
             if (counts[6-at-1] >= 2)
                 return (6-at)*2;
         return 0;
@@ -163,13 +163,13 @@ public class Yatzy {
 
 
 
-        for (i = 0; i != 6; i += 1)
+        for (i = 0; i < 6; i += 1)
             if (tallies[i] == 2) {
                 _2 = true;
                 _2_at = i+1;
             }
 
-        for (i = 0; i != 6; i += 1)
+        for (i = 0; i < 6; i += 1)
             if (tallies[i] == 3) {
                 _3 = true;
                 _3_at = i+1;
