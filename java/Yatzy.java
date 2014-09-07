@@ -51,7 +51,7 @@ public class Yatzy {
 		return sumMatchingValues(dice, 2);
 	}
 
-	private static int sumMatchingValues(Integer[] integers, int value) {
+	private int sumMatchingValues(Integer[] integers, int value) {
 		int s = 0;
 		for (int i=0; i < DICE_NUMBER; i++){
 			if (integers[i] == value) s += value;
