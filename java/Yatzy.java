@@ -53,6 +53,10 @@ public class Yatzy {
     }
 
 	private static int addTwos(Integer[] integers) {
+		return addAnyValue(integers);
+	}
+
+	private static int addAnyValue(Integer[] integers) {
 		int s = 0;
 		for (int i=0; i < 5; i++){
 			if (integers[i] == 2) s += 2;
@@ -65,9 +69,13 @@ public class Yatzy {
     }
 
 	private static int addThrees(Integer[] integers) {
+		return addAnyValue2(integers, 3);
+	}
+
+	private static int addAnyValue2(Integer[] integers, int value) {
 		int s = 0;
 		for (int i=0; i < 5; i++){
-			if (integers[i] == 3) s += 3;
+			if (integers[i] == value) s += value;
 		}
         return s;
 	}
