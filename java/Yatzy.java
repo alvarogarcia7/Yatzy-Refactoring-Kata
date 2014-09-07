@@ -36,20 +36,12 @@ public class Yatzy {
 
 
 	public static int ones(int d1, int d2, int d3, int d4, int d5) {
-		return new Yatzy(d1, d2, d3, d4, d5).ones();
+		return new Yatzy(d1, d2, d3, d4, d5).sumMatchingValues(1);
     }
 
-    private int ones() {
-    	return sumMatchingValues(1);
-	}
-
-	public static int twos(int d1, int d2, int d3, int d4, int d5) {
-    	return new Yatzy(d1, d2, d3, d4, d5).twos();
+    public static int twos(int d1, int d2, int d3, int d4, int d5) {
+    	return new Yatzy(d1, d2, d3, d4, d5).sumMatchingValues(2);
     }
-
-	private int twos() {
-		return sumMatchingValues(2);
-	}
 
 	private int sumMatchingValues(int value) {
 		int s = 0;
@@ -60,12 +52,8 @@ public class Yatzy {
 	}
 
     public static int threes(int d1, int d2, int d3, int d4, int d5) {
-    	return new Yatzy(d1, d2, d3, d4, d5).threes();
+    	return new Yatzy(d1, d2, d3, d4, d5).sumMatchingValues(3);
     }
-
-	private int threes() {
-		return sumMatchingValues(3);
-	}
 
 	public int fours()
     {
