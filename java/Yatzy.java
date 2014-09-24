@@ -82,14 +82,14 @@ public class Yatzy {
     public int two_pair(int d1, int d2, int d3, int d4, int d5)
     {
         int[] counts = getCounts(d1, d2, d3, d4, d5);
-        int n = 0;
+        int pairs = 0;
         int score = 0;
         for (int i = 5; i >= 0; i--)
             if (counts[i] >= 2) {
-                n++;
+                pairs++;
                 score += (i+1);
             }        
-        if (n == 2)
+        if (pairs == 2)
             return score * 2;
         else
             return 0;
